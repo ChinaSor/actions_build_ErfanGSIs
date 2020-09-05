@@ -64,6 +64,7 @@ jobs:
        #       ./transfer tmp final/GSI.zip
               
        - name: Upload GSI
+         uses: actions/upload-artifact@master
          with: 
               name: GSI.zip
               paht: final/GSI.zip
