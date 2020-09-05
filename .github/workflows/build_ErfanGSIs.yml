@@ -53,10 +53,10 @@ jobs:
        - name: Download Stock Rom & Generate GSI
          run: sudo ./ErfanGSIs/url2GSI.sh $ROM_URL $ROM_NAME
        
-       - name: Zip GSI  
-         run: |
-              mkdir final
-              zip -r final/GSI.zip /home/runner/work/actions_build_ErfanGSIs/actions_build_ErfanGSIs/ErfanGSIs/output/
+       #- name: Zip GSI  
+       #  run: |
+       #       mkdir final
+       #       zip -r final/GSI.zip /home/runner/work/actions_build_ErfanGSIs/actions_build_ErfanGSIs/ErfanGSIs/output/
        
        #- name: Upload GSI to BitSend
        #  run: |
@@ -67,5 +67,5 @@ jobs:
          uses: actions/upload-artifact@master
          with: 
               name: GSI
-              path: final/GSI.zip
+              path: /home/runner/work/actions_build_ErfanGSIs/actions_build_ErfanGSIs/ErfanGSIs/output/
             
